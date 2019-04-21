@@ -40,7 +40,7 @@ class ModuleChatLog : public Module
          {
               Channel* c = (Channel*)dest;
 
-              ServerInstance->Logs->Log("m_chatlog",DEFAULT,"%s: <%s!%s@%s> %s",c->name.c_str(), user->nick.c_str(), user->ident.c_str(), user->host.c_str(), text.c_str());
+              ServerInstance->Logs->Log("m_chatlog",DEFAULT,"%s: <%s> %s",c->name.c_str(), user->nick.c_str(), text.c_str());
          }
          return MOD_RES_PASSTHRU;
     }
